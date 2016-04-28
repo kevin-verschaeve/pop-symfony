@@ -1,0 +1,10 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <h1>Article n° {{ article.id }}</h1>
+
+    <p>{{ article.title }}</p>
+    <p>par: {{ article.author }}</p>
+
+    <a href="{{ path('article_new') }}">Créer un nouvel article</a>
+{% endblock %}

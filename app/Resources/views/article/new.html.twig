@@ -1,0 +1,23 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <h1 class="highlight text-centered">Créer un nouvel article</h1>
+    {{ form_start(form, {'attr': {'novalidate': 1}}) }}
+
+    <div>
+        <p class="error">{{ form_errors(form.title) }}</p>
+        <p><strong>{{ form_label(form.title) }}</strong></p>
+        {{ form_widget(form.title) }}
+    </div>
+    <div>
+        <p class="error">{{ form_errors(form.author) }}</p>
+        <p><strong>{{ form_label(form.author) }}</strong></p>
+        {{ form_widget(form.author) }}
+    </div>
+    <div>
+        {{ form_label(form.submit) }}
+        {{ form_widget(form.submit, {'attr': {'class': 'button-primary'}}) }}
+    </div>
+
+    {{ form_end(form) }}
+{% endblock %}
